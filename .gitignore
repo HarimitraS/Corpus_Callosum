@@ -1,12 +1,15 @@
-infant_mri_dataset/
-preprocessed/
-final_output/
-
-*.png
-*.nii
-*.nii.gz
-
 venv/
+mri_env/
 
 __pycache__/
 *.pyc
+
+*.nii
+*.nii.gz
+
+infant_mri_dataset/
+
+# ignore huge generated outputs
+preprocessed/4_sagittal_slices/
+preprocessed/5_denoised/
+preprocessed/6_super_resolution/
