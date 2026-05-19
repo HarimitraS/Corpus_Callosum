@@ -1,0 +1,12 @@
+infant_mri_dataset/
+preprocessed/
+final_output/
+
+*.png
+*.nii
+*.nii.gz
+
+venv/
+
+__pycache__/
+*.pyc
