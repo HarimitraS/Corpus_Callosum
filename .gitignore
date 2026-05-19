@@ -8,8 +8,5 @@ __pycache__/
 *.nii.gz
 
 infant_mri_dataset/
+preprocessed/
 
-# ignore huge generated outputs
-preprocessed/4_sagittal_slices/
-preprocessed/5_denoised/
-preprocessed/6_super_resolution/
