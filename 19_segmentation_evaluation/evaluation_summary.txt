@@ -1,0 +1,9 @@
+SEGMENTATION EVALUATION
+========================
+
+Dice: 0.8607 ± 0.2136
+IoU: 0.7935 ± 0.2114
+Precision: 0.9056 ± 0.1726
+Recall: 0.8423 ± 0.2245
+Accuracy: 0.9833 ± 0.0208
+Specificity: 0.9954 ± 0.0022
