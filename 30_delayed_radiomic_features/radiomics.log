@@ -1,0 +1,176 @@
+2026-08-07 22:34:40,096 INFO Loading parameter file C:\Users\kanishk\OneDrive\Desktop\infant\Corpus_Callosum\30_delayed_radiomic_features\params.yaml
+2026-08-07 22:34:40,150 INFO validation.valid
+2026-08-07 22:34:40,194 INFO Calculating features with label: 1
+2026-08-07 22:34:40,194 INFO Loading image and mask
+2026-08-07 22:34:40,209 ERROR s0147
+Traceback (most recent call last):
+  File "C:\Users\kanishk\OneDrive\Desktop\infant\Corpus_Callosum\30_delayed_radiomic_feature_extraction.py", line 347, in main
+    process_subject(
+  File "C:\Users\kanishk\OneDrive\Desktop\infant\Corpus_Callosum\30_delayed_radiomic_feature_extraction.py", line 255, in process_subject
+    feature_dict = extract_features(
+                   ^^^^^^^^^^^^^^^^^
+  File "C:\Users\kanishk\OneDrive\Desktop\infant\Corpus_Callosum\30_delayed_radiomic_feature_extraction.py", line 216, in extract_features
+    feature_vector = extractor.execute(
+                     ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kanishk\AppData\Roaming\Python\Python311\site-packages\radiomics\featureextractor.py", line 272, in execute
+    image, mask = self.loadImage(imageFilepath, maskFilepath, generalInfo, **_settings)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kanishk\AppData\Roaming\Python\Python311\site-packages\radiomics\featureextractor.py", line 385, in loadImage
+    mask = imageoperations.getMask(mask, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kanishk\AppData\Roaming\Python\Python311\site-packages\radiomics\imageoperations.py", line 49, in getMask
+    raise ValueError('No labels found in this mask (i.e. nothing is segmented)!')
+ValueError: No labels found in this mask (i.e. nothing is segmented)!
+2026-08-07 22:34:40,242 INFO Calculating features with label: 1
+2026-08-07 22:34:40,242 INFO Loading image and mask
+2026-08-07 22:34:40,318 INFO Computing shape2D
+2026-08-07 22:34:40,319 INFO Adding image type "Original" with custom settings: {}
+2026-08-07 22:34:40,319 INFO Adding image type "Exponential" with custom settings: {}
+2026-08-07 22:34:40,319 INFO Adding image type "Gradient" with custom settings: {}
+2026-08-07 22:34:40,319 INFO Adding image type "LBP2D" with custom settings: {}
+2026-08-07 22:34:40,319 INFO Adding image type "LBP3D" with custom settings: {}
+2026-08-07 22:34:40,319 INFO Adding image type "LoG" with custom settings: {}
+2026-08-07 22:34:40,319 INFO Adding image type "Logarithm" with custom settings: {}
+2026-08-07 22:34:40,319 INFO Adding image type "Square" with custom settings: {}
+2026-08-07 22:34:40,320 INFO Adding image type "SquareRoot" with custom settings: {}
+2026-08-07 22:34:40,320 INFO Adding image type "Wavelet" with custom settings: {}
+2026-08-07 22:34:40,320 INFO Calculating features for original image
+2026-08-07 22:34:40,322 INFO Computing firstorder
+2026-08-07 22:34:40,324 INFO Computing glcm
+2026-08-07 22:34:40,326 WARNING GLCM is symmetrical, therefore Sum Average = 2 * Joint Average, only 1 needs to be calculated
+2026-08-07 22:34:40,332 INFO Calculating features for exponential image
+2026-08-07 22:34:40,335 INFO Computing firstorder
+2026-08-07 22:34:40,337 INFO Computing glcm
+2026-08-07 22:34:40,338 WARNING GLCM is symmetrical, therefore Sum Average = 2 * Joint Average, only 1 needs to be calculated
+2026-08-07 22:34:40,344 INFO Calculating features for gradient image
+2026-08-07 22:34:40,347 INFO Computing firstorder
+2026-08-07 22:34:40,349 INFO Computing glcm
+2026-08-07 22:34:40,350 WARNING GLCM is symmetrical, therefore Sum Average = 2 * Joint Average, only 1 needs to be calculated
+2026-08-07 22:34:43,293 INFO Calculating features for lbp-2D image
+2026-08-07 22:34:43,298 INFO Computing firstorder
+2026-08-07 22:34:43,299 INFO Computing glcm
+2026-08-07 22:34:43,300 WARNING GLCM is symmetrical, therefore Sum Average = 2 * Joint Average, only 1 needs to be calculated
+2026-08-07 22:34:43,301 WARNING LBP 3D only available for 3 dimensional images, found 2 dimensions
+2026-08-07 22:34:43,309 INFO Calculating features for logarithm image
+2026-08-07 22:34:43,313 INFO Computing firstorder
+2026-08-07 22:34:43,314 INFO Computing glcm
+2026-08-07 22:34:43,316 WARNING GLCM is symmetrical, therefore Sum Average = 2 * Joint Average, only 1 needs to be calculated
+2026-08-07 22:34:43,321 INFO Calculating features for square image
+2026-08-07 22:34:43,325 INFO Computing firstorder
+2026-08-07 22:34:43,326 INFO Computing glcm
+2026-08-07 22:34:43,328 WARNING GLCM is symmetrical, therefore Sum Average = 2 * Joint Average, only 1 needs to be calculated
+2026-08-07 22:34:43,333 INFO Calculating features for squareroot image
+2026-08-07 22:34:43,336 INFO Computing firstorder
+2026-08-07 22:34:43,338 INFO Computing glcm
+2026-08-07 22:34:43,339 WARNING GLCM is symmetrical, therefore Sum Average = 2 * Joint Average, only 1 needs to be calculated
+2026-08-07 22:34:43,351 INFO Computing Wavelet H
+2026-08-07 22:34:43,351 INFO Calculating features for wavelet-H image
+2026-08-07 22:34:43,354 INFO Computing firstorder
+2026-08-07 22:34:43,356 INFO Computing glcm
+2026-08-07 22:34:43,357 WARNING GLCM is symmetrical, therefore Sum Average = 2 * Joint Average, only 1 needs to be calculated
+2026-08-07 22:34:43,357 INFO Calculating features for wavelet-L image
+2026-08-07 22:34:43,360 INFO Computing firstorder
+2026-08-07 22:34:43,362 INFO Computing glcm
+2026-08-07 22:34:43,364 WARNING GLCM is symmetrical, therefore Sum Average = 2 * Joint Average, only 1 needs to be calculated
+2026-08-07 22:34:43,370 INFO Calculating features with label: 1
+2026-08-07 22:34:43,370 INFO Loading image and mask
+2026-08-07 22:34:43,411 INFO Computing shape2D
+2026-08-07 22:34:43,411 INFO Adding image type "Original" with custom settings: {}
+2026-08-07 22:34:43,411 INFO Adding image type "Exponential" with custom settings: {}
+2026-08-07 22:34:43,411 INFO Adding image type "Gradient" with custom settings: {}
+2026-08-07 22:34:43,411 INFO Adding image type "LBP2D" with custom settings: {}
+2026-08-07 22:34:43,411 INFO Adding image type "LBP3D" with custom settings: {}
+2026-08-07 22:34:43,412 INFO Adding image type "LoG" with custom settings: {}
+2026-08-07 22:34:43,412 INFO Adding image type "Logarithm" with custom settings: {}
+2026-08-07 22:34:43,412 INFO Adding image type "Square" with custom settings: {}
+2026-08-07 22:34:43,412 INFO Adding image type "SquareRoot" with custom settings: {}
+2026-08-07 22:34:43,412 INFO Adding image type "Wavelet" with custom settings: {}
+2026-08-07 22:34:43,412 INFO Calculating features for original image
+2026-08-07 22:34:43,414 INFO Computing firstorder
+2026-08-07 22:34:43,416 INFO Computing glcm
+2026-08-07 22:34:43,417 WARNING GLCM is symmetrical, therefore Sum Average = 2 * Joint Average, only 1 needs to be calculated
+2026-08-07 22:34:43,422 INFO Calculating features for exponential image
+2026-08-07 22:34:43,425 INFO Computing firstorder
+2026-08-07 22:34:43,427 INFO Computing glcm
+2026-08-07 22:34:43,428 WARNING GLCM is symmetrical, therefore Sum Average = 2 * Joint Average, only 1 needs to be calculated
+2026-08-07 22:34:43,430 INFO Calculating features for gradient image
+2026-08-07 22:34:43,433 INFO Computing firstorder
+2026-08-07 22:34:43,436 INFO Computing glcm
+2026-08-07 22:34:43,437 WARNING GLCM is symmetrical, therefore Sum Average = 2 * Joint Average, only 1 needs to be calculated
+2026-08-07 22:34:43,460 INFO Calculating features for lbp-2D image
+2026-08-07 22:34:43,465 INFO Computing firstorder
+2026-08-07 22:34:43,467 INFO Computing glcm
+2026-08-07 22:34:43,467 WARNING GLCM is symmetrical, therefore Sum Average = 2 * Joint Average, only 1 needs to be calculated
+2026-08-07 22:34:43,468 WARNING LBP 3D only available for 3 dimensional images, found 2 dimensions
+2026-08-07 22:34:43,475 INFO Calculating features for logarithm image
+2026-08-07 22:34:43,478 INFO Computing firstorder
+2026-08-07 22:34:43,480 INFO Computing glcm
+2026-08-07 22:34:43,482 WARNING GLCM is symmetrical, therefore Sum Average = 2 * Joint Average, only 1 needs to be calculated
+2026-08-07 22:34:43,486 INFO Calculating features for square image
+2026-08-07 22:34:43,490 INFO Computing firstorder
+2026-08-07 22:34:43,492 INFO Computing glcm
+2026-08-07 22:34:43,493 WARNING GLCM is symmetrical, therefore Sum Average = 2 * Joint Average, only 1 needs to be calculated
+2026-08-07 22:34:43,499 INFO Calculating features for squareroot image
+2026-08-07 22:34:43,505 INFO Computing firstorder
+2026-08-07 22:34:43,507 INFO Computing glcm
+2026-08-07 22:34:43,508 WARNING GLCM is symmetrical, therefore Sum Average = 2 * Joint Average, only 1 needs to be calculated
+2026-08-07 22:34:43,516 INFO Computing Wavelet H
+2026-08-07 22:34:43,516 INFO Calculating features for wavelet-H image
+2026-08-07 22:34:43,520 INFO Computing firstorder
+2026-08-07 22:34:43,522 INFO Computing glcm
+2026-08-07 22:34:43,523 WARNING GLCM is symmetrical, therefore Sum Average = 2 * Joint Average, only 1 needs to be calculated
+2026-08-07 22:34:43,523 INFO Calculating features for wavelet-L image
+2026-08-07 22:34:43,526 INFO Computing firstorder
+2026-08-07 22:34:43,528 INFO Computing glcm
+2026-08-07 22:34:43,529 WARNING GLCM is symmetrical, therefore Sum Average = 2 * Joint Average, only 1 needs to be calculated
+2026-08-07 22:34:43,535 INFO Calculating features with label: 1
+2026-08-07 22:34:43,536 INFO Loading image and mask
+2026-08-07 22:34:43,593 INFO Computing shape2D
+2026-08-07 22:34:43,593 INFO Adding image type "Original" with custom settings: {}
+2026-08-07 22:34:43,594 INFO Adding image type "Exponential" with custom settings: {}
+2026-08-07 22:34:43,594 INFO Adding image type "Gradient" with custom settings: {}
+2026-08-07 22:34:43,594 INFO Adding image type "LBP2D" with custom settings: {}
+2026-08-07 22:34:43,594 INFO Adding image type "LBP3D" with custom settings: {}
+2026-08-07 22:34:43,594 INFO Adding image type "LoG" with custom settings: {}
+2026-08-07 22:34:43,594 INFO Adding image type "Logarithm" with custom settings: {}
+2026-08-07 22:34:43,594 INFO Adding image type "Square" with custom settings: {}
+2026-08-07 22:34:43,594 INFO Adding image type "SquareRoot" with custom settings: {}
+2026-08-07 22:34:43,594 INFO Adding image type "Wavelet" with custom settings: {}
+2026-08-07 22:34:43,594 INFO Calculating features for original image
+2026-08-07 22:34:43,597 INFO Computing firstorder
+2026-08-07 22:34:43,598 INFO Computing glcm
+2026-08-07 22:34:43,600 WARNING GLCM is symmetrical, therefore Sum Average = 2 * Joint Average, only 1 needs to be calculated
+2026-08-07 22:34:43,605 INFO Calculating features for exponential image
+2026-08-07 22:34:43,608 INFO Computing firstorder
+2026-08-07 22:34:43,609 INFO Computing glcm
+2026-08-07 22:34:43,611 WARNING GLCM is symmetrical, therefore Sum Average = 2 * Joint Average, only 1 needs to be calculated
+2026-08-07 22:34:43,613 INFO Calculating features for gradient image
+2026-08-07 22:34:43,617 INFO Computing firstorder
+2026-08-07 22:34:43,619 INFO Computing glcm
+2026-08-07 22:34:43,620 WARNING GLCM is symmetrical, therefore Sum Average = 2 * Joint Average, only 1 needs to be calculated
+2026-08-07 22:34:43,644 INFO Calculating features for lbp-2D image
+2026-08-07 22:34:43,648 INFO Computing firstorder
+2026-08-07 22:34:43,650 INFO Computing glcm
+2026-08-07 22:34:43,651 WARNING GLCM is symmetrical, therefore Sum Average = 2 * Joint Average, only 1 needs to be calculated
+2026-08-07 22:34:43,651 WARNING LBP 3D only available for 3 dimensional images, found 2 dimensions
+2026-08-07 22:34:43,658 INFO Calculating features for logarithm image
+2026-08-07 22:34:43,662 INFO Computing firstorder
+2026-08-07 22:34:43,664 INFO Computing glcm
+2026-08-07 22:34:43,666 WARNING GLCM is symmetrical, therefore Sum Average = 2 * Joint Average, only 1 needs to be calculated
+2026-08-07 22:34:43,670 INFO Calculating features for square image
+2026-08-07 22:34:43,674 INFO Computing firstorder
+2026-08-07 22:34:43,675 INFO Computing glcm
+2026-08-07 22:34:43,677 WARNING GLCM is symmetrical, therefore Sum Average = 2 * Joint Average, only 1 needs to be calculated
+2026-08-07 22:34:43,682 INFO Calculating features for squareroot image
+2026-08-07 22:34:43,685 INFO Computing firstorder
+2026-08-07 22:34:43,687 INFO Computing glcm
+2026-08-07 22:34:43,689 WARNING GLCM is symmetrical, therefore Sum Average = 2 * Joint Average, only 1 needs to be calculated
+2026-08-07 22:34:43,696 INFO Computing Wavelet H
+2026-08-07 22:34:43,696 INFO Calculating features for wavelet-H image
+2026-08-07 22:34:43,699 INFO Computing firstorder
+2026-08-07 22:34:43,701 INFO Computing glcm
+2026-08-07 22:34:43,702 WARNING GLCM is symmetrical, therefore Sum Average = 2 * Joint Average, only 1 needs to be calculated
+2026-08-07 22:34:43,702 INFO Calculating features for wavelet-L image
+2026-08-07 22:34:43,705 INFO Computing firstorder
+2026-08-07 22:34:43,707 INFO Computing glcm
+2026-08-07 22:34:43,709 WARNING GLCM is symmetrical, therefore Sum Average = 2 * Joint Average, only 1 needs to be calculated

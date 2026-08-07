@@ -12,11 +12,23 @@ from radiomics import featureextractor
 # PATHS
 # ==========================================================
 
-IMAGE_DIR = r"E:\Corpus_Callosum\24_delayed_preprocessing\4_sagittal_slices"
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
-MASK_DIR = r"E:\Corpus_Callosum\27_delayed_refined_masks"
+IMAGE_DIR = os.path.join(
+    PROJECT_ROOT,
+    "24_delayed_preprocessing",
+    "4_sagittal_slices"
+)
 
-OUTPUT_DIR = r"E:\Corpus_Callosum\30_delayed_radiomic_features"
+MASK_DIR = os.path.join(
+    PROJECT_ROOT,
+    "27_delayed_refined_masks"
+)
+
+OUTPUT_DIR = os.path.join(
+    PROJECT_ROOT,
+    "30_delayed_radiomic_features"
+)
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
