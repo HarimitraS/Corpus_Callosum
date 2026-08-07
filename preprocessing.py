@@ -5,14 +5,21 @@ import SimpleITK as sitk
 import cv2
 import matplotlib.pyplot as plt
 
-DATASET_PATH = r"C:\Users\Admin\Desktop\infant_mri_project\infant_mri_dataset"
-SAVE_BIAS = r"C:\Users\Admin\Desktop\infant_mri_project\preprocessed\1_bias_corrected"
-SAVE_SKULL = r"C:\Users\Admin\Desktop\infant_mri_project\preprocessed\2_skull_stripped"
-SAVE_NORM = r"C:\Users\Admin\Desktop\infant_mri_project\preprocessed\3_normalized"
-SAVE_SLICES = r"C:\Users\Admin\Desktop\infant_mri_project\preprocessed\4_sagittal_slices"
+DATASET_PATH = r"E:\infant_mri_dataset"
 
+SAVE_BIAS = r"E:\Corpus_Callosum\24_delayed_preprocessing\1_bias_corrected"
+SAVE_SKULL = r"E:\Corpus_Callosum\24_delayed_preprocessing\2_skull_stripped"
+SAVE_NORM = r"E:\Corpus_Callosum\24_delayed_preprocessing\3_normalized"
+SAVE_SLICES = r"E:\Corpus_Callosum\24_delayed_preprocessing\4_sagittal_slices"
+TARGET_SUBJECTS = [
+    "s0147",
+    "s0160",
+    "s0341",
+    "s0412"
+]
 for p in [SAVE_BIAS, SAVE_SKULL, SAVE_NORM, SAVE_SLICES]:
     os.makedirs(p, exist_ok=True)
+
 
 print("Folders ready!")
 print(f"Subjects found: {len(os.listdir(DATASET_PATH))}")
@@ -134,7 +141,7 @@ def save_nifti(data, reference_sitk_img, save_path, subject, suffix):
 subjects_done = []
 subjects_failed = []
 
-for subject in sorted(os.listdir(DATASET_PATH)):
+for subject in TARGET_SUBJECTS:
     subject_path = os.path.join(DATASET_PATH, subject)
     file_path = os.path.join(subject_path, "t1.nii.gz")
 
@@ -174,7 +181,9 @@ for subject in sorted(os.listdir(DATASET_PATH)):
 print(f"\nDone! Processed: {len(subjects_done)} subjects")
 print(f"Failed: {len(subjects_failed)} subjects")
 
-png_files = sorted([f for f in os.listdir(SAVE_SLICES) if f.endswith(".png")])[:6]
+png_files = sorted(
+    [f for f in os.listdir(SAVE_SLICES) if f.endswith(".png")]
+)
 
 if png_files:
     fig, axes = plt.subplots(1, len(png_files), figsize=(20, 5))
