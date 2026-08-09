@@ -1,4 +1,5 @@
 import os
+
 from PIL import Image
 
 import torch
@@ -6,17 +7,13 @@ from torch.utils.data import Dataset, DataLoader
 
 from torchvision import transforms
 
+
 # ==========================================================
-# PATHS
+# PATH
 # ==========================================================
 
-ROOT = r"E:\Corpus_Callosum"
+IMAGE_DIR = r"E:\Corpus_Callosum\4_sagittal_slices"
 
-IMAGE_DIR = os.path.join(
-    ROOT,
-    "24_gan_generation",
-    "delayed_images"
-)
 
 # ==========================================================
 # IMAGE TRANSFORMS
@@ -24,9 +21,13 @@ IMAGE_DIR = os.path.join(
 
 transform = transforms.Compose([
 
-    transforms.Grayscale(num_output_channels=1),
+    transforms.Grayscale(
+        num_output_channels=1
+    ),
 
-    transforms.Resize((512, 512)),
+    transforms.Resize(
+        (128, 128)
+    ),
 
     transforms.ToTensor(),
 
@@ -37,62 +38,101 @@ transform = transforms.Compose([
 
 ])
 
+
 # ==========================================================
 # DATASET
 # ==========================================================
 
 class MRIDataset(Dataset):
 
-    def __init__(self, image_dir, transform=None):
+    def __init__(
+        self,
+        image_dir,
+        transform=None
+    ):
 
         self.image_dir = image_dir
 
         self.transform = transform
 
+        # Automatically find ALL PNG images
         self.images = sorted([
 
-            f
+            filename
 
-            for f in os.listdir(image_dir)
+            for filename in os.listdir(image_dir)
 
-            if f.lower().endswith(".png")
+            if filename.lower().endswith(".png")
 
         ])
+
+        print("\n" + "=" * 60)
+        print("GAN MRI DATASET")
+        print("=" * 60)
+
+        print(
+            "Dataset Path:",
+            self.image_dir
+        )
+
+        print(
+            "Images Found:",
+            len(self.images)
+        )
+
+        print("=" * 60)
+
 
     def __len__(self):
 
         return len(self.images)
 
+
     def __getitem__(self, index):
 
         filename = self.images[index]
 
-        path = os.path.join(
+        image_path = os.path.join(
             self.image_dir,
             filename
         )
 
-        image = Image.open(path).convert("L")
+        image = Image.open(
+            image_path
+        ).convert("L")
+
 
         if self.transform:
 
-            image = self.transform(image)
+            image = self.transform(
+                image
+            )
+
 
         return image
+
 
 # ==========================================================
 # DATALOADER
 # ==========================================================
 
-def get_dataloader(batch_size=2):
+def get_dataloader(
+    batch_size=2
+):
 
     dataset = MRIDataset(
-
         IMAGE_DIR,
-
         transform=transform
-
     )
+
+
+    if len(dataset) == 0:
+
+        raise RuntimeError(
+            "No PNG images found in:\n"
+            + IMAGE_DIR
+        )
+
 
     loader = DataLoader(
 
@@ -106,7 +146,9 @@ def get_dataloader(batch_size=2):
 
     )
 
+
     return loader
+
 
 # ==========================================================
 # TEST
@@ -114,18 +156,30 @@ def get_dataloader(batch_size=2):
 
 if __name__ == "__main__":
 
-    loader = get_dataloader()
+    loader = get_dataloader(
+        batch_size=2
+    )
 
-    print("=" * 60)
-    print("MRI Dataset Loader")
+
+    print("\n" + "=" * 60)
+    print("MRI DATASET LOADER TEST")
     print("=" * 60)
 
-    print(f"Images Found : {len(loader.dataset)}")
+
+    print(
+        "Images Found:",
+        len(loader.dataset)
+    )
+
 
     for batch in loader:
 
-        print("Batch Shape :", batch.shape)
+        print(
+            "Batch Shape:",
+            batch.shape
+        )
 
         break
+
 
     print("=" * 60)
