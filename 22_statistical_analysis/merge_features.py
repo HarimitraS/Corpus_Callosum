@@ -58,7 +58,6 @@ def find_subject_column(df):
         f"Could not find subject identifier.\nAvailable columns:\n{list(df.columns)}"
     )
 
-
 morph_id = find_subject_column(morph)
 texture_id = find_subject_column(texture)
 radiomic_id = find_subject_column(radiomic)
@@ -98,7 +97,6 @@ def clean_subject(x):
 
     return x
 
-
 for df in [morph, texture, radiomic, meta]:
     df["Subject"] = df["Subject"].apply(clean_subject)
 
@@ -112,10 +110,22 @@ radiomic = radiomic.drop_duplicates(subset="Subject")
 meta = meta.drop_duplicates(subset="Subject")
 
 # ==========================================================
+# Remove duplicate feature columns
+# ==========================================================
+
+texture = texture.loc[:, ~texture.columns.duplicated()]
+radiomic = radiomic.loc[:, ~radiomic.columns.duplicated()]
+meta = meta.loc[:, ~meta.columns.duplicated()]
+
+# ==========================================================
 # Merge datasets
 # ==========================================================
 
-master = morph.merge(texture, on="Subject", how="inner")
+master = morph.merge(
+    texture,
+    on="Subject",
+    how="inner"
+)
 
 master = master.merge(
     radiomic,
@@ -130,16 +140,30 @@ master = master.merge(
 )
 
 # ==========================================================
+# Missing value summary
+# ==========================================================
+
+missing = master.isnull().sum()
+missing = missing[missing > 0]
+
+if len(missing) > 0:
+    print("\nMissing Values")
+    print("------------------------------")
+    print(missing.sort_values(ascending=False))
+else:
+    print("\nNo missing values found.")
+
+# ==========================================================
 # Summary
 # ==========================================================
 
 print("\nRows in each dataset")
 print("------------------------------")
-print("Morphology :", len(morph))
-print("Texture    :", len(texture))
-print("Radiomics  :", len(radiomic))
-print("Metadata   :", len(meta))
-print("Merged     :", len(master))
+print(f"Morphology : {len(morph)}")
+print(f"Texture    : {len(texture)}")
+print(f"Radiomics  : {len(radiomic)}")
+print(f"Metadata   : {len(meta)}")
+print(f"Merged     : {len(master)}")
 print("------------------------------")
 
 # ==========================================================

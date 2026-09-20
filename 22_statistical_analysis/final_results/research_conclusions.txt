@@ -1,0 +1,283 @@
+============================================================
+RESEARCH CONCLUSIONS
+Infant Brain MRI Corpus Callosum Segmentation and
+Myelination Status Analysis
+============================================================
+
+
+1. STUDY OVERVIEW
+-----------------
+
+The project developed a complete computational pipeline
+for infant brain MRI analysis, beginning with MRI
+preprocessing and corpus callosum extraction and extending
+through segmentation, refinement, morphological analysis,
+texture analysis, radiomic feature extraction, statistical
+feature selection, and machine-learning classification.
+
+The final statistical/classification dataset contains
+202.0 samples,
+including 190.0
+normal-myelinisation samples and
+12.0
+delayed-myelinisation samples.
+
+The final dataset contains
+20.0
+selected features and
+0.0
+missing feature values.
+
+
+2. DATASET CHARACTERISTICS
+--------------------------
+
+The final dataset is strongly imbalanced toward the normal
+myelination class.
+
+Normal samples:
+190.0
+(94.06%)
+
+Delayed samples:
+12.0
+(5.94%)
+
+This class imbalance is an important consideration when
+interpreting classification performance. Accuracy alone
+should therefore not be treated as the primary indicator
+of clinical or research usefulness. Precision, recall,
+F1-score, ROC-AUC, and the variability across validation
+folds provide additional information about model behaviour.
+
+
+3. STATISTICAL ANALYSIS AND FEATURE REDUCTION
+---------------------------------------------
+
+The project applied statistical analysis to identify
+features associated with differences between the normal
+and delayed myelination groups.
+
+The workflow used Mann-Whitney U testing with
+Benjamini-Hochberg false-discovery-rate correction.
+
+The final modelling dataset was reduced to
+20.0
+features.
+
+The selected features combine information from several
+feature families, including first-order intensity
+measurements, texture features, wavelet-derived features,
+shape measurements, and morphological measurements.
+
+The final feature set therefore represents multiple
+properties of the corpus callosum rather than relying on
+a single measurement type.
+
+
+4. FINAL CLASSIFICATION PERFORMANCE
+-----------------------------------
+
+The final cross-validation comparison evaluated:
+
+- Logistic Regression
+- KNN
+- Random Forest
+- SVM
+
+The best model according to mean F1-score was:
+
+BEST MODEL: KNN
+
+Mean Accuracy:
+0.9900
+
+Mean Precision:
+1.0000
+
+Mean Recall:
+0.8000
+
+Mean F1-score:
+0.8667
+
+Mean ROC-AUC:
+0.8947
+
+
+5. MODEL COMPARISON
+-------------------
+
+Models ranked by mean F1-score:
+
+1. KNN: Accuracy=0.9900, Precision=1.0000, Recall=0.8000, F1=0.8667, ROC-AUC=0.8947
+2. Random Forest: Accuracy=0.9850, Precision=0.9000, Recall=0.8000, F1=0.8333, ROC-AUC=0.9592
+3. Logistic Regression: Accuracy=0.9507, Precision=0.6057, Recall=0.8000, F1=0.6700, ROC-AUC=0.9737
+4. SVM: Accuracy=0.9555, Precision=0.6533, Recall=0.6333, F1=0.6167, ROC-AUC=0.9518
+
+
+
+6. INTERPRETATION OF THE BEST MODEL
+-----------------------------------
+
+The selected final model achieved a high mean accuracy and
+perfect mean precision in the five-fold validation performed
+in this pipeline.
+
+Its mean recall was lower than its precision, indicating that
+although predictions assigned to the delayed class were highly
+precise in the validation folds, some delayed cases were not
+identified.
+
+This distinction is particularly important because the delayed
+class contains substantially fewer samples than the normal
+class.
+
+The model should therefore not be described simply as
+"highly accurate" without also reporting its recall and
+F1-score.
+
+
+7. ROC-AUC INTERPRETATION
+-------------------------
+
+The ROC-AUC results demonstrate that different models have
+different ranking/discrimination behaviour.
+
+In the final validation:
+
+KNN achieved a mean ROC-AUC of approximately
+0.8947.
+
+Random Forest achieved a mean ROC-AUC of approximately
+0.9592.
+
+Logistic Regression achieved a mean ROC-AUC of approximately
+0.9737.
+
+SVM achieved a mean ROC-AUC of approximately
+0.9518.
+
+These differences show why model selection should consider
+multiple evaluation metrics rather than relying on one score.
+
+
+8. GAN-BASED AUGMENTATION
+-------------------------
+
+The project also incorporated a WGAN-GP-based delayed-sample
+generation stage.
+
+The GAN-generated data were subsequently passed through the
+feature extraction and statistical-analysis workflow.
+
+A dedicated GAN augmentation comparison was included in the project workflow. The corresponding comparison results should be interpreted together with the final model-validation results rather than using GAN augmentation as an automatic indicator of improved performance.
+
+The GAN stage demonstrates the feasibility of incorporating
+synthetically generated delayed samples into the broader
+pipeline. However, because the number of synthetic samples
+successfully incorporated into the feature dataset is limited,
+the GAN results should be considered supportive/experimental
+rather than definitive evidence that synthetic augmentation
+improves generalisation.
+
+
+9. MAIN RESEARCH FINDING
+------------------------
+
+The overall pipeline demonstrates that quantitative
+morphological, intensity, and texture/radiomic characteristics
+of the corpus callosum can be used to construct machine-learning
+models for distinguishing normal and delayed myelination status
+within the available dataset.
+
+The strongest final classifier according to mean F1-score was
+KNN, with a mean
+F1-score of 0.8667 and mean ROC-AUC of
+0.8947.
+
+
+10. IMPORTANT LIMITATIONS
+-------------------------
+
+The most important limitation is the substantial class
+imbalance between normal and delayed cases.
+
+Only
+12.0
+delayed samples are present in the final dataset.
+
+Consequently, the validation estimates for the delayed class
+can have relatively high variability between folds.
+
+This is reflected in the reported standard deviations for
+recall and F1-score.
+
+The current results should therefore be interpreted as
+promising experimental findings rather than definitive
+clinical performance estimates.
+
+Additional independent datasets containing more delayed
+myelination cases would be required for stronger external
+validation.
+
+
+11. RECOMMENDED FUTURE WORK
+---------------------------
+
+Future work should focus on:
+
+1. Increasing the number of delayed myelination cases.
+
+2. Performing external validation on an independent cohort.
+
+3. Evaluating sensitivity/specificity and confusion matrices
+   in addition to the current metrics.
+
+4. Testing whether GAN-generated samples improve performance
+   consistently across independent validation sets.
+
+5. Performing feature-importance and interpretability analysis.
+
+6. Investigating whether the selected radiomic, texture,
+   morphological, and intensity features remain stable across
+   different scanners and acquisition protocols.
+
+7. Validating the segmentation and downstream measurements
+   against expert annotations on a larger cohort.
+
+
+12. OVERALL CONCLUSION
+----------------------
+
+The completed pipeline successfully integrates medical-image
+preprocessing, corpus callosum segmentation, segmentation
+refinement, quantitative morphological analysis, texture and
+radiomic feature extraction, statistical feature selection,
+GAN-based data generation, and machine-learning classification.
+
+Using the final 20-feature dataset, the best-performing model
+in the five-fold validation was KNN.
+
+It achieved:
+
+Accuracy  = 0.9900
+Precision = 1.0000
+Recall    = 0.8000
+F1-score  = 0.8667
+ROC-AUC   = 0.8947
+
+These results indicate that the extracted quantitative
+characteristics contain useful information for differentiating
+normal and delayed myelination status in the studied dataset.
+
+However, the strong class imbalance and limited number of
+delayed cases mean that the findings require validation on
+larger and independent datasets before any clinical
+generalisation can be made.
+
+The work therefore provides a promising computational
+framework for quantitative infant corpus callosum analysis
+and automated assessment of myelination status, while also
+clearly identifying the need for larger datasets and
+independent validation.

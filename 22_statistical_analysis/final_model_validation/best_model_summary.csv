@@ -1,0 +1,7 @@
+Metric,Value
+Best Model,KNN
+Accuracy,0.99
+Precision,1.0
+Recall,0.8
+F1,0.8666666666666666
+ROC-AUC,0.894736842105263
