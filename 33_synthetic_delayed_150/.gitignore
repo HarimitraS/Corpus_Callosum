@@ -1,0 +1,28 @@
+# Generated synthetic MRI candidates
+candidates/
+
+# Generated preprocessing outputs
+02_preprocessed/
+
+# Generated CC extraction outputs
+03_cc_extraction/
+
+# U-Net localization outputs
+03b_unet_localization/
+
+# Validation images/contact sheets
+validation/*.png
+
+# Any generated reserve/accepted/rejected data
+accepted/
+reserve/
+rejected/
+
+# Large generated data
+*.png
+
+# Keep scripts and CSV metadata
+!*.py
+!*.csv
+!*.md
+!*.txt
