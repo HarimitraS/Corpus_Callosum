@@ -1,0 +1,5 @@
+Dataset,Total,Normal,Delayed,Real_Subjects,Synthetic_Subjects,Role
+cleaned_master_dataset.csv,192,190,2,192,0,"Real clinical cohort (s0147, s0160 are the only real delayed)"
+master_dataset.csv,192,190,2,192,0,Pre-cleaning real cohort with full features
+final_statistical_dataset.csv,202,190,12,192,10,192 real + 10 synthetic delayed from 31 pipeline
+final_dataset_with_gan.csv,202,190,12,192,10,Identical merged set from 31 pipeline Stage 10

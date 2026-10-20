@@ -1,0 +1,201 @@
+File,Initial_FG_Pixels,Final_FG_Pixels,Status,Reason
+candidate_000001.png,242,107,VALID,Refined mask produced
+candidate_000002.png,24,19,VALID,Refined mask produced
+candidate_000003.png,35,16,VALID,Refined mask produced
+candidate_000004.png,79,51,VALID,Refined mask produced
+candidate_000005.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000006.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000007.png,191,197,VALID,Refined mask produced
+candidate_000008.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000009.png,30,11,VALID,Refined mask produced
+candidate_000010.png,87,43,VALID,Refined mask produced
+candidate_000011.png,263,180,VALID,Refined mask produced
+candidate_000012.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000013.png,75,80,VALID,Refined mask produced
+candidate_000014.png,29,10,VALID,Refined mask produced
+candidate_000015.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000016.png,26,22,VALID,Refined mask produced
+candidate_000017.png,47,46,VALID,Refined mask produced
+candidate_000018.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000019.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000020.png,52,49,VALID,Refined mask produced
+candidate_000021.png,358,263,VALID,Refined mask produced
+candidate_000022.png,246,216,VALID,Refined mask produced
+candidate_000023.png,118,59,VALID,Refined mask produced
+candidate_000024.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000025.png,19,18,VALID,Refined mask produced
+candidate_000026.png,39,29,VALID,Refined mask produced
+candidate_000027.png,183,145,VALID,Refined mask produced
+candidate_000028.png,40,26,VALID,Refined mask produced
+candidate_000029.png,120,117,VALID,Refined mask produced
+candidate_000030.png,8,5,VALID,Refined mask produced
+candidate_000031.png,87,41,VALID,Refined mask produced
+candidate_000032.png,5,0,EMPTY_POST_REFINE,Removed during morphological refinement
+candidate_000033.png,73,68,VALID,Refined mask produced
+candidate_000034.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000035.png,491,463,VALID,Refined mask produced
+candidate_000036.png,5,0,EMPTY_POST_REFINE,Removed during morphological refinement
+candidate_000037.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000038.png,60,57,VALID,Refined mask produced
+candidate_000039.png,75,23,VALID,Refined mask produced
+candidate_000040.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000041.png,28,11,VALID,Refined mask produced
+candidate_000042.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000043.png,203,83,VALID,Refined mask produced
+candidate_000044.png,33,31,VALID,Refined mask produced
+candidate_000045.png,37,26,VALID,Refined mask produced
+candidate_000046.png,34,23,VALID,Refined mask produced
+candidate_000047.png,300,109,VALID,Refined mask produced
+candidate_000048.png,24,11,VALID,Refined mask produced
+candidate_000049.png,6,0,EMPTY_POST_REFINE,Removed during morphological refinement
+candidate_000050.png,135,84,VALID,Refined mask produced
+candidate_000051.png,19,11,VALID,Refined mask produced
+candidate_000052.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000053.png,10,0,EMPTY_POST_REFINE,Removed during morphological refinement
+candidate_000054.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000055.png,11,0,EMPTY_POST_REFINE,Removed during morphological refinement
+candidate_000056.png,28,24,VALID,Refined mask produced
+candidate_000057.png,65,53,VALID,Refined mask produced
+candidate_000058.png,88,86,VALID,Refined mask produced
+candidate_000059.png,46,43,VALID,Refined mask produced
+candidate_000060.png,12,0,EMPTY_POST_REFINE,Removed during morphological refinement
+candidate_000061.png,53,51,VALID,Refined mask produced
+candidate_000062.png,9,5,VALID,Refined mask produced
+candidate_000063.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000064.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000065.png,48,29,VALID,Refined mask produced
+candidate_000066.png,43,43,VALID,Refined mask produced
+candidate_000067.png,130,80,VALID,Refined mask produced
+candidate_000068.png,93,53,VALID,Refined mask produced
+candidate_000069.png,99,63,VALID,Refined mask produced
+candidate_000070.png,31,19,VALID,Refined mask produced
+candidate_000071.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000072.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000073.png,6,0,EMPTY_POST_REFINE,Removed during morphological refinement
+candidate_000074.png,16,5,VALID,Refined mask produced
+candidate_000075.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000076.png,33,30,VALID,Refined mask produced
+candidate_000077.png,14,11,VALID,Refined mask produced
+candidate_000078.png,11,0,EMPTY_POST_REFINE,Removed during morphological refinement
+candidate_000079.png,22,11,VALID,Refined mask produced
+candidate_000080.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000081.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000082.png,165,68,VALID,Refined mask produced
+candidate_000083.png,2,0,EMPTY_POST_REFINE,Removed during morphological refinement
+candidate_000084.png,34,23,VALID,Refined mask produced
+candidate_000085.png,31,25,VALID,Refined mask produced
+candidate_000086.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000087.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000088.png,35,30,VALID,Refined mask produced
+candidate_000089.png,117,76,VALID,Refined mask produced
+candidate_000090.png,76,48,VALID,Refined mask produced
+candidate_000091.png,154,51,VALID,Refined mask produced
+candidate_000092.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000093.png,24,16,VALID,Refined mask produced
+candidate_000094.png,8,0,EMPTY_POST_REFINE,Removed during morphological refinement
+candidate_000095.png,47,43,VALID,Refined mask produced
+candidate_000096.png,67,41,VALID,Refined mask produced
+candidate_000097.png,450,122,VALID,Refined mask produced
+candidate_000098.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000099.png,2,0,EMPTY_POST_REFINE,Removed during morphological refinement
+candidate_000100.png,23,20,VALID,Refined mask produced
+candidate_000101.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000102.png,67,57,VALID,Refined mask produced
+candidate_000103.png,40,17,VALID,Refined mask produced
+candidate_000104.png,282,115,VALID,Refined mask produced
+candidate_000105.png,30,15,VALID,Refined mask produced
+candidate_000106.png,16,14,VALID,Refined mask produced
+candidate_000107.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000108.png,33,11,VALID,Refined mask produced
+candidate_000109.png,123,88,VALID,Refined mask produced
+candidate_000110.png,8,5,VALID,Refined mask produced
+candidate_000111.png,20,10,VALID,Refined mask produced
+candidate_000112.png,53,39,VALID,Refined mask produced
+candidate_000113.png,38,28,VALID,Refined mask produced
+candidate_000114.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000115.png,29,32,VALID,Refined mask produced
+candidate_000116.png,230,140,VALID,Refined mask produced
+candidate_000117.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000118.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000119.png,262,204,VALID,Refined mask produced
+candidate_000120.png,429,430,VALID,Refined mask produced
+candidate_000121.png,3,0,EMPTY_POST_REFINE,Removed during morphological refinement
+candidate_000122.png,41,37,VALID,Refined mask produced
+candidate_000123.png,49,46,VALID,Refined mask produced
+candidate_000124.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000125.png,167,91,VALID,Refined mask produced
+candidate_000126.png,14,0,EMPTY_POST_REFINE,Removed during morphological refinement
+candidate_000127.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000128.png,109,50,VALID,Refined mask produced
+candidate_000129.png,210,86,VALID,Refined mask produced
+candidate_000130.png,158,77,VALID,Refined mask produced
+candidate_000131.png,14,14,VALID,Refined mask produced
+candidate_000132.png,1,0,EMPTY_POST_REFINE,Removed during morphological refinement
+candidate_000133.png,11,10,VALID,Refined mask produced
+candidate_000134.png,33,29,VALID,Refined mask produced
+candidate_000135.png,71,29,VALID,Refined mask produced
+candidate_000136.png,35,18,VALID,Refined mask produced
+candidate_000137.png,41,14,VALID,Refined mask produced
+candidate_000138.png,10,0,EMPTY_POST_REFINE,Removed during morphological refinement
+candidate_000139.png,86,64,VALID,Refined mask produced
+candidate_000140.png,7,0,EMPTY_POST_REFINE,Removed during morphological refinement
+candidate_000141.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000142.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000143.png,29,18,VALID,Refined mask produced
+candidate_000144.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000145.png,74,71,VALID,Refined mask produced
+candidate_000146.png,17,14,VALID,Refined mask produced
+candidate_000147.png,27,12,VALID,Refined mask produced
+candidate_000148.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000149.png,38,32,VALID,Refined mask produced
+candidate_000150.png,157,140,VALID,Refined mask produced
+candidate_000151.png,96,87,VALID,Refined mask produced
+candidate_000152.png,37,25,VALID,Refined mask produced
+candidate_000153.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000154.png,142,117,VALID,Refined mask produced
+candidate_000155.png,143,75,VALID,Refined mask produced
+candidate_000156.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000157.png,96,103,VALID,Refined mask produced
+candidate_000158.png,42,12,VALID,Refined mask produced
+candidate_000159.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000160.png,209,68,VALID,Refined mask produced
+candidate_000161.png,33,18,VALID,Refined mask produced
+candidate_000162.png,24,21,VALID,Refined mask produced
+candidate_000163.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000164.png,11,8,VALID,Refined mask produced
+candidate_000165.png,107,105,VALID,Refined mask produced
+candidate_000166.png,69,43,VALID,Refined mask produced
+candidate_000167.png,106,63,VALID,Refined mask produced
+candidate_000168.png,198,137,VALID,Refined mask produced
+candidate_000169.png,49,21,VALID,Refined mask produced
+candidate_000170.png,49,35,VALID,Refined mask produced
+candidate_000171.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000172.png,141,115,VALID,Refined mask produced
+candidate_000173.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000174.png,67,61,VALID,Refined mask produced
+candidate_000175.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000176.png,83,69,VALID,Refined mask produced
+candidate_000177.png,50,41,VALID,Refined mask produced
+candidate_000178.png,3,0,EMPTY_POST_REFINE,Removed during morphological refinement
+candidate_000179.png,59,28,VALID,Refined mask produced
+candidate_000180.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000181.png,48,34,VALID,Refined mask produced
+candidate_000182.png,41,22,VALID,Refined mask produced
+candidate_000183.png,110,65,VALID,Refined mask produced
+candidate_000184.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000185.png,140,128,VALID,Refined mask produced
+candidate_000186.png,312,222,VALID,Refined mask produced
+candidate_000187.png,49,22,VALID,Refined mask produced
+candidate_000188.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000189.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000190.png,84,81,VALID,Refined mask produced
+candidate_000191.png,0,0,EMPTY_INITIAL,Zero U-Net foreground
+candidate_000192.png,128,94,VALID,Refined mask produced
+candidate_000193.png,91,43,VALID,Refined mask produced
+candidate_000194.png,12,5,VALID,Refined mask produced
+candidate_000195.png,6,5,VALID,Refined mask produced
+candidate_000196.png,125,122,VALID,Refined mask produced
+candidate_000197.png,55,51,VALID,Refined mask produced
+candidate_000198.png,11,0,EMPTY_POST_REFINE,Removed during morphological refinement
+candidate_000199.png,70,69,VALID,Refined mask produced
+candidate_000200.png,0,0,EMPTY_INITIAL,Zero U-Net foreground

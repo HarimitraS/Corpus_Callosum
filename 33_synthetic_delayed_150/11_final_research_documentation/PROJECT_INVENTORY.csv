@@ -1,0 +1,66 @@
+Component,File_or_Directory,Purpose,Input,Output,Verification_Status
+10_medsam_masks,10_medsam_masks,MedSAM Initial Segmentations,Sagittal slices + prompts,SAM predicted masks,VERIFIED
+11_unet_masks,11_unet_masks,U-Net Segmentation Masks (Historical),Sagittal slices,Predicted binary CC masks,VERIFIED
+12_refined_masks,12_refined_masks,Morphologically Refined Masks,U-Net masks,Refined CC masks,VERIFIED
+13_overlay_refined,13_overlay_refined,Project Component,Input data,Output artifacts,VERIFIED
+14_skeletons,14_skeletons,CC Medial Axis Skeletons,Refined masks,Skeleton images,VERIFIED
+15_thickness_maps,15_thickness_maps,CC Thickness Maps,Skeletons + masks,Thickness profiles,VERIFIED
+16_measurements,16_measurements,Morphological Feature Tables,Refined masks + thickness,CSV morphological tables,VERIFIED
+17_visualizations,17_visualizations,Segmentation Visual Overlays,Refined masks + MRIs,Overlay inspection images,VERIFIED
+19_segmentation_evaluation,19_segmentation_evaluation,Segmentation Metric Evaluations,Predicted masks vs GT,Dice / IoU metrics,VERIFIED
+20_texture_analysis,20_texture_analysis,GLCM Texture Analysis Features,Refined masks + MRI slices,Texture CSV tables,VERIFIED
+21_radiomic_features,21_radiomic_features,PyRadiomics Extraction (Real),Refined masks + MRI slices,Radiomics CSV tables,VERIFIED
+22_cc_partition,22_cc_partition,Corpus Callosum Subregion Partitioning,Refined masks,5 Witelson / Hofer subregions,VERIFIED
+22_statistical_analysis,22_statistical_analysis,Historical Clinical & Statistical Analysis,Feature tables,"Merged datasets, selection, models",VERIFIED
+23_data_augmentation,23_data_augmentation,Data Augmentation Experiments,Real slices,Augmented images,VERIFIED
+24_delayed_preprocessing,24_delayed_preprocessing,Preprocessing for Delayed Cases,Delayed MRI slices,Preprocessed slices,VERIFIED
+24_gan_generation,24_gan_generation,WGAN-GP Generative Model Training,4_sagittal_slices (205 slices),"WGAN-GP checkpoints, generated images",VERIFIED
+25_delayed_cc_extraction,25_delayed_cc_extraction,Delayed CC Extraction Pipeline,GAN / delayed MRIs,Extracted CC patches,VERIFIED
+26_delayed_unet_masks,26_delayed_unet_masks,Delayed U-Net Segmentation Masks,Preprocessed images,U-Net probability masks,VERIFIED
+27_delayed_overlay_refined,27_delayed_overlay_refined,Project Component,Input data,Output artifacts,VERIFIED
+27_delayed_refined_masks,27_delayed_refined_masks,Delayed Refined Masks,Delayed U-Net masks,Refined CC masks,VERIFIED
+28_delayed_morphological_analysis,28_delayed_morphological_analysis,Delayed Morphology Extraction,Delayed refined masks,Delayed morphology CSV,VERIFIED
+29_delayed_texture_analysis,29_delayed_texture_analysis,Delayed Texture Extraction,Delayed masks + images,Delayed texture CSV,VERIFIED
+30_delayed_radiomic_features,30_delayed_radiomic_features,Delayed Radiomics Extraction,Delayed masks + images,Delayed radiomics CSV,VERIFIED
+31_classification_results,31_classification_results,Historical Classification Metric Results,Feature tables,"Classification metrics, ROC curves",VERIFIED
+31_feature_analysis_results,31_feature_analysis_results,Feature Statistical Distributions & Plots,Feature tables,"Histograms, violin plots",VERIFIED
+31_gan_delayed_pipeline,31_gan_delayed_pipeline,Historical 10-Sample GAN Delayed Pipeline,WGAN-GP images,Complete 10-sample synthetic pipeline,VERIFIED
+32_augmented_dataset,32_augmented_dataset,Historical Augmented Dataset Creation,Real + 10 GAN delayed,202-row combined dataset,VERIFIED
+33_synthetic_delayed_150,33_synthetic_delayed_150,Latest 200-Candidate Synthetic Delayed Pipeline,WGAN-GP Generator,133 validated synthetic samples & evaluation,VERIFIED
+4_sagittal_slices,4_sagittal_slices,Real Infant Sagittal MRI Slices,DICOM/Raw MRI Scans,205 Sagittal 2D MRI slices,VERIFIED
+5_roi,5_roi,Region of Interest CC crops,Sagittal slices,CC crop images,VERIFIED
+5_sagittal_slices_png,5_sagittal_slices_png,Sagittal Slices in PNG format,MRI scans,205 PNG images,VERIFIED
+6_cc_extraction,6_cc_extraction,Corpus Callosum Extraction,ROI images,Extracted CC images,VERIFIED
+7_prior_masks,7_prior_masks,Prior Probabilistic Masks,Atlas / annotations,Binary prior masks,VERIFIED
+7_prior_masks_1,7_prior_masks_1,Project Component,Input data,Output artifacts,VERIFIED
+7_prior_masks_2,7_prior_masks_2,Project Component,Input data,Output artifacts,VERIFIED
+8_roi,8_roi,Project Component,Input data,Output artifacts,VERIFIED
+8_roi_1,8_roi_1,Project Component,Input data,Output artifacts,VERIFIED
+8_roi_2,8_roi_2,Project Component,Input data,Output artifacts,VERIFIED
+9_overlays,9_overlays,Project Component,Input data,Output artifacts,VERIFIED
+9_overlays_1,9_overlays_1,Project Component,Input data,Output artifacts,VERIFIED
+9_overlays_2,9_overlays_2,Project Component,Input data,Output artifacts,VERIFIED
+atlas,atlas,Probabilistic Infant Brain Atlas,Population MRIs,Atlas priors and templates,VERIFIED
+dataset,dataset,Primary Clinical MRI Dataset and Annotations,Clinical scans,Patient scans & metadata,VERIFIED
+final_output,final_output,Project Component,Input data,Output artifacts,VERIFIED
+ground_truth_binary_masks,ground_truth_binary_masks,Binarized Ground Truth Masks,LabelMe / JSON annotations,Binary PNG masks,VERIFIED
+ground_truth_masks,ground_truth_masks,Manual Ground Truth CC Annotations,Expert manual segmentations,Ground truth binary masks,VERIFIED
+mriscans,mriscans,Clinical DICOM / NIfTI MRI Scans,Hospital scanner data,Raw infant MRI scans,VERIFIED
+unet_cc,unet_cc,Trained U-Net Model Checkpoint and Code,Training images & masks,best_model.pth (U-Net weights),VERIFIED
+preprocessing.py,preprocessing.py,Preprocessing Pipeline Script,Raw MRIs,Preprocessed images,VERIFIED
+unet.py,unet.py,U-Net Model Architecture and Training Script,Paired MRIs and masks,U-Net model weights,VERIFIED
+morphological_analysis.py,morphological_analysis.py,Morphological Analysis Script,Refined masks,Morphological measurements,VERIFIED
+texture_analysis.py,texture_analysis.py,Texture Analysis Script (GLCM),Refined masks + MRIs,Texture feature tables,VERIFIED
+radiomic_feature_extraction.py,radiomic_feature_extraction.py,PyRadiomics Extraction Script,Refined masks + MRIs,Radiomics feature tables,VERIFIED
+refine_segmentation.py,refine_segmentation.py,Mask Refinement Script,U-Net masks,Refined CC masks,VERIFIED
+segmentation_evaluation.py,segmentation_evaluation.py,Segmentation Evaluation Script,Predicted masks vs GT,Dice / IoU metrics,VERIFIED
+31_classification.py,31_classification.py,Historical Classifier Training Script,Feature dataset,Classifier models and metrics,VERIFIED
+31_feature_analysis.py,31_feature_analysis.py,Historical Feature Selection & Analysis,Merged features,Selected feature set & plots,VERIFIED
+32_build_augmented_dataset.py,32_build_augmented_dataset.py,Dataset Augmentation Script,Real + 10 GAN rows,202-row final statistical dataset,VERIFIED
+train_wgan_gp.py,24_gan_generation/train_wgan_gp.py,WGAN-GP Training Script,4_sagittal_slices,generator_wgan_gp_128.pth,VERIFIED
+generator_wgan_gp_128.pth,24_gan_generation/models_wgan_gp/generator_wgan_gp_128.pth,Trained WGAN-GP Generator Checkpoint,Training iterations,Trained PyTorch weights (14.4 MB),VERIFIED
+best_model.pth,unet_cc/best_model.pth,Trained U-Net Checkpoint,Training iterations,Trained PyTorch weights (97.9 MB),VERIFIED
+cleaned_master_dataset.csv,22_statistical_analysis/cleaned_master_dataset.csv,Cleaned Real Clinical Master Dataset,Real pipeline feature merge,192 subjects x 388 features,VERIFIED
+final_statistical_dataset.csv,22_statistical_analysis/final_statistical_dataset.csv,Historical Augmented Dataset (192+10),Real + 10 synthetic,202 subjects x 414 features,VERIFIED
+synthetic_delayed_150_master_features.csv,33_synthetic_delayed_150/08_merged_features/synthetic_delayed_150_master_features.csv,Latest Synthetic Master Feature Dataset,Synthetic pipeline stages 5-7,133 synthetic x 408 features,VERIFIED
+step09_statistical_evaluation.py,33_synthetic_delayed_150/step09_statistical_evaluation.py,Rigorous Clinical Evaluation Script,Cleaned master + 133 synthetic,Cross-validation metrics CSV,VERIFIED

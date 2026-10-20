@@ -1,0 +1,9 @@
+Model,Setting,Accuracy,Precision,Recall,F1,ROC_AUC
+Logistic Regression,"Baseline (Train Real, Test Real)",0.9583333333333333,0.0,0.0,0.0,0.8578947368421053
+Logistic Regression,"Augmented (Train Real+Synth, Test Real)",0.984375,0.0,0.0,0.0,0.9315789473684211
+KNN,"Baseline (Train Real, Test Real)",0.9895833333333334,0.0,0.0,0.0,0.4631578947368421
+KNN,"Augmented (Train Real+Synth, Test Real)",0.984375,0.0,0.0,0.0,0.4631578947368421
+Random Forest,"Baseline (Train Real, Test Real)",0.9895833333333334,0.0,0.0,0.0,0.8263157894736841
+Random Forest,"Augmented (Train Real+Synth, Test Real)",0.96875,0.0,0.0,0.0,0.831578947368421
+Gradient Boosting,"Baseline (Train Real, Test Real)",0.9895833333333334,0.0,0.0,0.0,0.4894736842105263
+Gradient Boosting,"Augmented (Train Real+Synth, Test Real)",0.9635416666666667,0.0,0.0,0.0,0.47631578947368425
